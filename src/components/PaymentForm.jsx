@@ -57,7 +57,7 @@ const PaymentForm = () => {
     localStorage.setItem('userData', JSON.stringify(userData));
 
     try {
-      const response = await axios.post('http://localhost:5000/api/initiate', {
+      const response = await axios.post('https://fdp.met.edu/api/initiate', {
         ...userData,
         amount,
       });
@@ -79,7 +79,7 @@ const PaymentForm = () => {
       form.submit();
     } catch (error) {
       setError('Failed to initiate payment. Please try again.');
-      navigate('/payment-failure');
+      navigate('/failure');
     } finally {
       setLoading(false);
     }
@@ -195,7 +195,7 @@ const PaymentForm = () => {
                 value="Other"
                 onChange={handleChange}
               />{' '}
-              Other (please specify)
+              Other
             </Label>
           </FormGroup>
         </FormGroup>

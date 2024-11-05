@@ -18,7 +18,7 @@ const AdminDashboard = () => {
 
   const fetchPayments = async () => {
     try {
-      const response = await axios.get('/users');
+      const response = await axios.get('https://fdp.met.edu/api/users');
       setPayments(response.data);
     } catch (error) {
       console.error('Error fetching payments:', error);
