@@ -18,7 +18,7 @@ const PaymentForm = () => {
   });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-  const amount = 2500; // Fixed registration fee in rupees
+  const amount = 1.00; // Fixed registration fee in rupees
 
   useEffect(() => {
     const savedData = localStorage.getItem('userData');
@@ -87,7 +87,8 @@ const PaymentForm = () => {
 
   return (
     <div className="container" style={{ maxWidth: '500px', padding: '20px' }}>
-      <h2 className="text-center" style={{ color: 'red' }}>FDP Registration</h2>
+      <img src="https://www.met.edu/frontendassets/images/MET_College_in_Mumbai_logo.png" style={{ maxWidth: '100px', marginBottom: '20px', display: 'block', margin: '0 auto'  }} alt="" />
+      <h2 className="text-center mt-4" style={{ color: 'red' }}>MET FDP Registration</h2>
       <Form onSubmit={handlePayment}>
         <FormGroup>
           <Label for="name">Full Name</Label>
