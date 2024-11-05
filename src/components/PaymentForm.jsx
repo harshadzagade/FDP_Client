@@ -21,6 +21,30 @@ const PaymentForm = () => {
   const amount = 1.00; // Fixed registration fee in rupees
 
   useEffect(() => {
+    // Clear localStorage on page reload
+    localStorage.clear();
+
+    // Optionally, you could reset cache headers if necessary with a timestamp
+    const now = new Date().getTime();
+    axios.defaults.headers['Cache-Control'] = 'no-cache';
+    axios.defaults.headers['Pragma'] = 'no-cache';
+    axios.defaults.headers['Expires'] = now.toString(); // Adds timestamp to prevent cache
+
+    // Clear user data as well on reload if needed
+    setUserData({
+      name: '',
+      email: '',
+      phone: '',
+      organization: '',
+      role: '',
+      experience: '',
+      interest: [],
+      previousExperience: '',
+      expectations: [],
+    });
+  }, []);
+
+  useEffect(() => {
     const savedData = localStorage.getItem('userData');
     if (savedData) {
       setUserData(JSON.parse(savedData));
