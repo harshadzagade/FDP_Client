@@ -15,11 +15,11 @@ const PaymentFailure = () => {
   return (
     <div style={{ textAlign: 'center', padding: '30px', color: '#333', fontFamily: 'Arial, sans-serif' }}>
       <h1 style={{ color: '#B22222', fontWeight: 'bold' }}>Payment Failed</h1>
-      <p style={{ color: '#333', fontSize: '16px' }}>
+      <p style={{ marginTop: '20px', color: '#B22222', fontSize: '16px' }}>
         Kindly Retry Again.
       </p>
 
-      <div style={{
+      {/* <div style={{
         marginTop: '20px',
         padding: '20px',
         borderRadius: '8px',
@@ -37,12 +37,12 @@ const PaymentFailure = () => {
         <p><strong>Name:</strong> {name}</p>
         <p><strong>Email:</strong> {email}</p>
         <p><strong>Phone:</strong> {phone}</p>
-      </div>
+      </div> */}
 
       <div style={{ marginTop: '20px', color: '#B22222', fontSize: '16px' }}>
         <p>If you have any inquiries, feel free to contact us:</p>
-        <p><strong>Phone:</strong> 9136901541</p>
-        <p><strong>Email:</strong> metcet@met.edu</p>
+        <p><strong>Phone:</strong> <a href="tel:9136901541"> 9136901541 </a></p>
+        <p><strong>Email:</strong> <a href="mailto:metcet@met.edu">metcet@met.edu</a> </p>
       </div>
     </div>
   );

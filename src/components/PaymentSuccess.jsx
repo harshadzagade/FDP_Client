@@ -16,10 +16,10 @@ const PaymentSuccess = () => {
     <div style={{ textAlign: 'center', padding: '30px', color: '#333', fontFamily: 'Arial, sans-serif' }}>
       <h1 style={{ color: '#B22222', fontWeight: 'bold' }}>Thank You</h1>
       <p style={{ color: '#333', fontSize: '16px' }}>
-        Kindly share your payment screenshot on metcet@met.edu and contact us on 9136901541.
+        Kindly share your payment screenshot on <a href="mailto:metcet@met.edu">metcet@met.edu</a> and contact us on <a href="tel:9136901541"> 9136901541</a>.
       </p>
 
-      <div style={{
+      {/* <div style={{
         marginTop: '20px',
         padding: '20px',
         borderRadius: '8px',
@@ -43,7 +43,7 @@ const PaymentSuccess = () => {
         <p>If you have any inquiries, feel free to contact us:</p>
         <p><strong>Phone:</strong> 8655401497</p>
         <p><strong>Email:</strong> harshadz_ics@met.edu</p>
-      </div>
+      </div> */}
     </div>
   );
 };
