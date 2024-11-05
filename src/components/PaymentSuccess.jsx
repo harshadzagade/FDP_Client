@@ -14,9 +14,9 @@ const PaymentSuccess = () => {
 
   return (
     <div style={{ textAlign: 'center', padding: '30px', color: '#333', fontFamily: 'Arial, sans-serif' }}>
-      <h1 style={{ color: '#B22222', fontWeight: 'bold' }}>Thank You for Registering for the FDP Program!</h1>
+      <h1 style={{ color: '#B22222', fontWeight: 'bold' }}>Thank You</h1>
       <p style={{ color: '#333', fontSize: '16px' }}>
-        We have received your payment and will get back to you with further details soon.
+        Kindly share your payment screenshot on metcet@met.edu and contact us on 9136901541.
       </p>
 
       <div style={{

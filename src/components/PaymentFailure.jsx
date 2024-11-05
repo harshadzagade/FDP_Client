@@ -13,12 +13,23 @@ const PaymentFailure = () => {
   const phone = queryParams.get('phone');
 
   return (
-    <div style={{ textAlign: 'center', padding: '20px' }}>
-      <h1>Thank You for Registering for the FDP Program!</h1>
-      <p>We have received your payment, and we will get back to you with further details soon.</p>
+    <div style={{ textAlign: 'center', padding: '30px', color: '#333', fontFamily: 'Arial, sans-serif' }}>
+      <h1 style={{ color: '#B22222', fontWeight: 'bold' }}>Payment Failed</h1>
+      <p style={{ color: '#333', fontSize: '16px' }}>
+        Kindly Retry Again.
+      </p>
 
-      <div style={{ marginTop: '20px', border: '1px solid #ccc', padding: '20px', borderRadius: '5px', display: 'inline-block' }}>
-        <h2>Payment Details</h2>
+      <div style={{
+        marginTop: '20px',
+        padding: '20px',
+        borderRadius: '8px',
+        border: '2px solid #B22222',
+        display: 'inline-block',
+        maxWidth: '500px',
+        backgroundColor: '#fff',
+        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+      }}>
+        <h2 style={{ color: '#B22222' }}>Payment Details</h2>
         <p><strong>Transaction ID:</strong> {txnId}</p>
         <p><strong>Status:</strong> {status}</p>
         <p><strong>Mode of Payment:</strong> {modeOfPayment}</p>
@@ -28,10 +39,10 @@ const PaymentFailure = () => {
         <p><strong>Phone:</strong> {phone}</p>
       </div>
 
-      <div style={{ marginTop: '20px' }}>
-        <p>For any inquiries, feel free to contact us:</p>
-        <p><strong>Phone:</strong> 8655401497</p>
-        <p><strong>Email:</strong> harshadz_ics@met.edu</p>
+      <div style={{ marginTop: '20px', color: '#B22222', fontSize: '16px' }}>
+        <p>If you have any inquiries, feel free to contact us:</p>
+        <p><strong>Phone:</strong> 9136901541</p>
+        <p><strong>Email:</strong> metcet@met.edu</p>
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Form, FormGroup, Label, Input, Button, Col } from 'reactstrap';
+import React, { useEffect, useState } from 'react';
+import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
 import axios from '../services/api';
 import { useNavigate } from 'react-router-dom';
 
@@ -18,14 +18,19 @@ const PaymentForm = () => {
   });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-
   const amount = 2500; // Fixed registration fee in rupees
+
+  useEffect(() => {
+    const savedData = localStorage.getItem('userData');
+    if (savedData) {
+      setUserData(JSON.parse(savedData));
+    }
+  }, []);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
 
     if (type === 'checkbox') {
-      // Handle multiple selections for expectations and interest fields
       setUserData((prevData) => ({
         ...prevData,
         [name]: checked
@@ -41,6 +46,15 @@ const PaymentForm = () => {
     e.preventDefault();
     setLoading(true);
     setError('');
+
+    const missingFields = Object.keys(userData).filter(field => !userData[field]);
+    if (missingFields.length > 0) {
+      setError('Please fill in all required fields.');
+      setLoading(false);
+      return;
+    }
+
+    localStorage.setItem('userData', JSON.stringify(userData));
 
     try {
       const response = await axios.post('http://localhost:5000/api/initiate', {

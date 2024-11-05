@@ -1,7 +1,7 @@
 // src/components/AdminDashboard.js
 import React, { useState, useEffect } from 'react';
 import axios from '../services/api';
-import { Table, Button, Form, FormGroup, Label, Input, Container, Row, Col } from 'reactstrap';
+import { Table, Button, Form, FormGroup, Label, Input, Container } from 'reactstrap';
 
 const AdminDashboard = () => {
   const [payments, setPayments] = useState([]);
@@ -9,7 +9,7 @@ const AdminDashboard = () => {
   const [credentials, setCredentials] = useState({ username: '', password: '' });
 
   const handleLogin = () => {
-    if (credentials.username === 'FDP_Admin' && credentials.password === 'FDP@004') {
+    if (credentials.username === 'FDP' && credentials.password === 'FDP@123') {
       setIsAuthenticated(true);
     } else {
       alert('Invalid login credentials');
@@ -18,7 +18,7 @@ const AdminDashboard = () => {
 
   const fetchPayments = async () => {
     try {
-      const response = await axios.get('/payment/all');
+      const response = await axios.get('/users');
       setPayments(response.data);
     } catch (error) {
       console.error('Error fetching payments:', error);
@@ -61,7 +61,7 @@ const AdminDashboard = () => {
   }
 
   return (
-    <Container className="mt-5">
+    <Container fluid className="mt-5">
       <h1>Admin Dashboard</h1>
       <Table striped>
         <thead>
@@ -69,6 +69,13 @@ const AdminDashboard = () => {
             <th>ID</th>
             <th>Name</th>
             <th>Email</th>
+            <th>Phone</th>
+            <th>Organization</th>
+            <th>Role</th>
+            <th>Experience</th>
+            <th>Interest</th>
+            <th>Previous Experience</th>
+            <th>Expectations</th>
             <th>Amount</th>
             <th>Transaction ID</th>
             <th>Status</th>
@@ -80,6 +87,13 @@ const AdminDashboard = () => {
               <td>{payment.id}</td>
               <td>{payment.name}</td>
               <td>{payment.email}</td>
+              <td>{payment.phone}</td>
+              <td>{payment.organization}</td>
+              <td>{payment.role}</td>
+              <td>{payment.experience}</td>
+              <td>{Array.isArray(payment.interest) ? payment.interest.join(', ') : payment.interest}</td>
+              <td>{payment.previousExperience}</td>
+              <td>{Array.isArray(payment.expectations) ? payment.expectations.join(', ') : payment.expectations}</td>
               <td>{payment.amount}</td>
               <td>{payment.transaction_id}</td>
               <td>{payment.status}</td>
