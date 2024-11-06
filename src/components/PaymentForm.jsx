@@ -18,19 +18,15 @@ const PaymentForm = () => {
   });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [errors, setErrors] = useState({ email: '', phone: '' });
   const amount = 1.00; // Fixed registration fee in rupees
 
   useEffect(() => {
-    // Clear localStorage on page reload
     localStorage.clear();
-
-    // Optionally, you could reset cache headers if necessary with a timestamp
     const now = new Date().getTime();
     axios.defaults.headers['Cache-Control'] = 'no-cache';
     axios.defaults.headers['Pragma'] = 'no-cache';
-    axios.defaults.headers['Expires'] = now.toString(); // Adds timestamp to prevent cache
-
-    // Clear user data as well on reload if needed
+    axios.defaults.headers['Expires'] = now.toString();
     setUserData({
       name: '',
       email: '',
@@ -53,16 +49,32 @@ const PaymentForm = () => {
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
+    setUserData((prevData) => {
+      if (type === 'checkbox') {
+        return {
+          ...prevData,
+          [name]: checked
+            ? [...prevData[name], value]
+            : prevData[name].filter((v) => v !== value),
+        };
+      }
+      return { ...prevData, [name]: value };
+    });
 
-    if (type === 'checkbox') {
-      setUserData((prevData) => ({
-        ...prevData,
-        [name]: checked
-          ? [...prevData[name], value]
-          : prevData[name].filter((v) => v !== value),
+    // Validate email and phone on change
+    if (name === 'email') {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        email: emailRegex.test(value) ? '' : 'Invalid email format',
       }));
-    } else {
-      setUserData({ ...userData, [name]: value });
+    }
+    if (name === 'phone') {
+      const phoneRegex = /^[0-9]{10}$/; // Assuming a 10-digit phone number
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        phone: phoneRegex.test(value) ? '' : 'Invalid phone number',
+      }));
     }
   };
 
@@ -71,9 +83,15 @@ const PaymentForm = () => {
     setLoading(true);
     setError('');
 
-    const missingFields = Object.keys(userData).filter(field => !userData[field]);
+    const missingFields = Object.keys(userData).filter((field) => !userData[field]);
     if (missingFields.length > 0) {
       setError('Please fill in all required fields.');
+      setLoading(false);
+      return;
+    }
+
+    if (errors.email || errors.phone) {
+      setError('Please correct the errors before proceeding.');
       setLoading(false);
       return;
     }
@@ -111,7 +129,7 @@ const PaymentForm = () => {
 
   return (
     <div className="container" style={{ maxWidth: '500px', padding: '20px' }}>
-      <img src="https://www.met.edu/frontendassets/images/MET_College_in_Mumbai_logo.png" style={{ maxWidth: '100px', marginBottom: '20px', display: 'block', margin: '0 auto'  }} alt="" />
+      <img src="https://www.met.edu/frontendassets/images/MET_College_in_Mumbai_logo.png" style={{ maxWidth: '100px', marginBottom: '20px', display: 'block', margin: '0 auto' }} alt="" />
       <h2 className="text-center mt-4" style={{ color: 'red' }}>MET FDP Registration</h2>
       <Form onSubmit={handlePayment}>
         <FormGroup>
@@ -137,6 +155,7 @@ const PaymentForm = () => {
             onChange={handleChange}
             required
           />
+          {errors.email && <p style={{ color: 'red' }}>{errors.email}</p>}
         </FormGroup>
         <FormGroup>
           <Label for="phone">Contact Number</Label>
@@ -149,6 +168,7 @@ const PaymentForm = () => {
             onChange={handleChange}
             required
           />
+          {errors.phone && <p style={{ color: 'red' }}>{errors.phone}</p>}
         </FormGroup>
         <FormGroup>
           <Label for="organization">Organization/Institution</Label>
