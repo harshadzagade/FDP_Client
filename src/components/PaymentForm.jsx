@@ -19,7 +19,7 @@ const PaymentForm = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [errors, setErrors] = useState({ email: '', phone: '' });
-  const amount = 1.00; // Fixed registration fee in rupees
+  const amount = 2500.00; // Fixed registration fee in rupees
 
   useEffect(() => {
     localStorage.clear();
