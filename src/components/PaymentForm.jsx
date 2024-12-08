@@ -18,24 +18,33 @@ const PaymentForm = () => {
   });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [errors, setErrors] = useState({ email: '', phone: '' });
   const amount = 1800.00; // Fixed registration fee in rupees
+
+  useEffect(() => {
+    localStorage.clear();
+    const now = new Date().getTime();
+    axios.defaults.headers['Cache-Control'] = 'no-cache';
+    axios.defaults.headers['Pragma'] = 'no-cache';
+    axios.defaults.headers['Expires'] = now.toString();
+    setUserData({
+      name: '',
+      email: '',
+      phone: '',
+      organization: '',
+      role: '',
+      experience: '',
+      interest: [],
+      previousExperience: '',
+      expectations: [],
+    });
+  }, []);
 
   useEffect(() => {
     const savedData = localStorage.getItem('userData');
     if (savedData) {
       setUserData(JSON.parse(savedData));
     }
-
-    // Clear localStorage on reload or when user navigates away
-    const handleUnload = () => {
-      localStorage.removeItem('userData');
-    };
-
-    window.addEventListener('beforeunload', handleUnload);
-
-    return () => {
-      window.removeEventListener('beforeunload', handleUnload);
-    };
   }, []);
 
   const handleChange = (e) => {
@@ -279,7 +288,7 @@ const PaymentForm = () => {
                 value="Other"
                 onChange={handleChange}
               />{' '}
-              Other
+              Other (please specify)
             </Label>
           </FormGroup>
         </FormGroup>
