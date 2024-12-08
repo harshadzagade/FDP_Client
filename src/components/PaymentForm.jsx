@@ -18,13 +18,24 @@ const PaymentForm = () => {
   });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-  const amount = 1.00; // Fixed registration fee in rupees
+  const amount = 1800.00; // Fixed registration fee in rupees
 
   useEffect(() => {
     const savedData = localStorage.getItem('userData');
     if (savedData) {
       setUserData(JSON.parse(savedData));
     }
+
+    // Clear localStorage on reload or when user navigates away
+    const handleUnload = () => {
+      localStorage.removeItem('userData');
+    };
+
+    window.addEventListener('beforeunload', handleUnload);
+
+    return () => {
+      window.removeEventListener('beforeunload', handleUnload);
+    };
   }, []);
 
   const handleChange = (e) => {
@@ -57,7 +68,7 @@ const PaymentForm = () => {
     localStorage.setItem('userData', JSON.stringify(userData));
 
     try {
-      const response = await axios.post('http://localhost:5000/api/initiate', {
+      const response = await axios.post('https://fdp.met.edu/api/initiate', {
         ...userData,
         amount,
       });
@@ -79,7 +90,7 @@ const PaymentForm = () => {
       form.submit();
     } catch (error) {
       setError('Failed to initiate payment. Please try again.');
-      navigate('/payment-failure');
+      navigate('/failure');
     } finally {
       setLoading(false);
     }
@@ -87,11 +98,11 @@ const PaymentForm = () => {
 
   return (
     <div className="container" style={{ maxWidth: '500px', padding: '20px' }}>
-      <img src="https://www.met.edu/frontendassets/images/MET_College_in_Mumbai_logo.png" style={{ maxWidth: '100px', marginBottom: '20px', display: 'block', margin: '0 auto'  }} alt="" />
-      <h2 className="text-center mt-4" style={{ color: 'red' }}>MET FDP Registration</h2>
+      <img src="https://www.met.edu/frontendassets/images/MET_College_in_Mumbai_logo.png" style={{ maxWidth: '100px', marginBottom: '20px', display: 'block', margin: '0 auto' }} alt="" />
+      <h2 className="text-center mt-4" style={{ color: 'red' }}>5 Days Immersive Hybrid mode FDP on Case Study Writing</h2> <br />
       <Form onSubmit={handlePayment}>
         <FormGroup>
-          <Label for="name">Full Name</Label>
+          <Label for="name">Full Name (As it should appear on your certificate) </Label>
           <Input
             type="text"
             name="name"
@@ -195,7 +206,7 @@ const PaymentForm = () => {
                 value="Other"
                 onChange={handleChange}
               />{' '}
-              Other (please specify)
+              Other
             </Label>
           </FormGroup>
         </FormGroup>
@@ -244,7 +255,7 @@ const PaymentForm = () => {
                 value="Other"
                 onChange={handleChange}
               />{' '}
-              Other (please specify)
+              Other
             </Label>
           </FormGroup>
         </FormGroup>
