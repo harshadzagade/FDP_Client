@@ -40,16 +40,32 @@ const PaymentForm = () => {
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
+    setUserData((prevData) => {
+      if (type === 'checkbox') {
+        return {
+          ...prevData,
+          [name]: checked
+            ? [...prevData[name], value]
+            : prevData[name].filter((v) => v !== value),
+        };
+      }
+      return { ...prevData, [name]: value };
+    });
 
-    if (type === 'checkbox') {
-      setUserData((prevData) => ({
-        ...prevData,
-        [name]: checked
-          ? [...prevData[name], value]
-          : prevData[name].filter((v) => v !== value),
+    // Validate email and phone on change
+    if (name === 'email') {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        email: emailRegex.test(value) ? '' : 'Invalid email format',
       }));
-    } else {
-      setUserData({ ...userData, [name]: value });
+    }
+    if (name === 'phone') {
+      const phoneRegex = /^[0-9]{10}$/; // Assuming a 10-digit phone number
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        phone: phoneRegex.test(value) ? '' : 'Invalid phone number',
+      }));
     }
   };
 
@@ -58,9 +74,15 @@ const PaymentForm = () => {
     setLoading(true);
     setError('');
 
-    const missingFields = Object.keys(userData).filter(field => !userData[field]);
+    const missingFields = Object.keys(userData).filter((field) => !userData[field]);
     if (missingFields.length > 0) {
       setError('Please fill in all required fields.');
+      setLoading(false);
+      return;
+    }
+
+    if (errors.email || errors.phone) {
+      setError('Please correct the errors before proceeding.');
       setLoading(false);
       return;
     }
@@ -124,6 +146,7 @@ const PaymentForm = () => {
             onChange={handleChange}
             required
           />
+          {errors.email && <p style={{ color: 'red' }}>{errors.email}</p>}
         </FormGroup>
         <FormGroup>
           <Label for="phone">Contact Number</Label>
@@ -136,6 +159,7 @@ const PaymentForm = () => {
             onChange={handleChange}
             required
           />
+          {errors.phone && <p style={{ color: 'red' }}>{errors.phone}</p>}
         </FormGroup>
         <FormGroup>
           <Label for="organization">Organization/Institution</Label>
