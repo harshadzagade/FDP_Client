@@ -129,7 +129,7 @@ const PaymentForm = () => {
 
   return (
     <div className="container" style={{ maxWidth: '500px', padding: '20px' }}>
-      <img src="https://www.met.edu/frontendassets/images/MET_College_in_Mumbai_logo.png" style={{ maxWidth: '100px', marginBottom: '20px', display: 'block', margin: '0 auto' }} alt="" />
+      {/* <img src="https://www.met.edu/frontendassets/images/MET_College_in_Mumbai_logo.png" style={{ maxWidth: '100px', marginBottom: '20px', display: 'block', margin: '0 auto' }} alt="" /> */}
       <h2 className="text-center mt-4" style={{ color: 'red' }}>5 Days Immersive Hybrid mode FDP on Case Study Writing</h2> <br />
       <Form onSubmit={handlePayment}>
         <FormGroup>
