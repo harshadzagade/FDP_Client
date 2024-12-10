@@ -49,10 +49,10 @@ function IMM_LandingPage() {
                 <div className="grid max-w-screen-xl px-4 pt-20 pb-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 lg:pt-28">
                     <div className="mr-auto place-self-center lg:col-span-7">
                         <h1 className="max-w-2xl mb-4 text-4xl mt-4 font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl text-black lg:text-left md:text-left">
-                            5 Days Immersive Hybrid mode
+                            5 Days Immersive Hybrid mode FDP
                         </h1>
                         <p className="font-medium leading-tight text-gray-600 mt-4">
-                            FDP on Case Study Writing 7th , 8th , 9th , 10th and 25th January, 2025
+                            on Case Study Writing 7th , 8th , 9th , 10th and 25th January, 2025
                         </p>
                         <div className="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
 
@@ -134,7 +134,7 @@ function IMM_LandingPage() {
                                         </svg>
                                         <div className="relative ml-4 cursor-pointer select-none items-center py-4 pr-12">
                                             <h2 className=" text-3xl font-bold tracking-tight text-red-600">
-                                                About Centre of Educational Technology
+                                                About MET Centre of Educational Technology
                                             </h2>
                                         </div>
                                         <div className="max-h-0 overflow-hidden transition-all duration-500 peer-checked:max-h-[51rem]">
