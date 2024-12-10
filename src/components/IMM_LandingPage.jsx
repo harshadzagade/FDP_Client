@@ -410,7 +410,7 @@ function IMM_LandingPage() {
                                             <div className="flex flex-col sm:flex-row items-center sm:items-start rounded-md border border-gray-100 bg-white p-3 shadow-lg">
                                                 <img
                                                     className="h-20 w-20 rounded-full object-cover sm:mb-0 sm:mr-4"
-                                                    src="../../assets/img/moushmi1.jpg"
+                                                    src="../../assets/img/mouchmi.jpg"
                                                     alt="Dr. Mouchumi Deka"
                                                 />
                                                 <div>
