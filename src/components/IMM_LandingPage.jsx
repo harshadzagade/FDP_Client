@@ -65,14 +65,15 @@ function IMM_LandingPage() {
                         </div>
                     </div>
                     <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-                        <img src="../../assets/img/fdp-bg.jpg" alt="hero image" />
+                        <img src="../../assets/img/fdp-bg.png" alt="hero image" />
                     </div>
                 </div>
             </section>
 
             <section className="bg-white ">
                 <div className="max-w-screen-xl px-4 py-6 mx-auto space-y-12 lg:space-y-20 lg:py-6 lg:px-6">
-                    <div className="items-center ">
+
+                    {/* <div className="items-center ">
                         <div className="text-black sm:text-lg ">
                             <h2 className="mb-4 text-3xl font-bold tracking-tight text-red-600">
                                 About MET
@@ -83,13 +84,42 @@ function IMM_LandingPage() {
                                 At MET thousands of students and faculty are involved in delivering unique learning systems, through ultra modern infrastructure and academic rigour.
                             </p>
                         </div>
+                    </div> */}
+
+                    <div className="items-center ">
+                        <div className="text-black sm:text-lg ">
+                            <ul className="ml-[-2rem]" >
+                                <li className="text-left">
+                                    <label for="accordion-2" className="relative flex flex-col rounded-md border border-gray-100 shadow-md">
+                                        <input className="peer hidden" type="checkbox" id="accordion-2" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="absolute right-0 top-4 ml-auto mr-5 h-4 text-gray-500 transition peer-checked:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                        <div className="relative ml-4 cursor-pointer select-none items-center py-4 pr-12">
+                                            <h2 className=" text-3xl font-bold tracking-tight text-red-600">
+                                                About MET
+                                            </h2>
+                                        </div>
+                                        <div className="max-h-0 overflow-hidden transition-all duration-500 peer-checked:max-h-[51rem]">
+                                            <div className="p-5">
+                                                <p className="text-base font-normal  text-gray-500">
+                                                    Established in 1989, with a mission to redefine the system of education, Mumbai Educational Trust (MET) is a professionally managed, multi-disciplinary and multi-faceted oasis of knowledge. Its premiere educational institutes conduct university accredited and autonomous courses. The grant of the ISO 9001:2015 certification is an acknowledgement of the institution's capability to deliver professional education that meets the highest standards of professionalism worldwide. All this, to help young professionals face the challenges of life. And make their mark in the corporate world.
+                                                    Training is imparted round-the-clock, seven days a week. Projects and assignments are given utmost importance and students learn on the job. Application-oriented knowledge, garnered in the lecture halls, is applied to industry assignments. The faculty spares no effort to make the students razor sharp, so that they make their mark in the corporate world. No effort has been spared, to create an environment that encourages students, to push the limits of their minds.
+                                                    At MET thousands of students and faculty are involved in delivering unique learning systems, through ultra modern infrastructure and academic rigour.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </section>
 
             <section className="bg-white ">
                 <div className="max-w-screen-xl px-4 py-6 mx-auto space-y-12 lg:space-y-20 lg:py-6 lg:px-6">
-                    <div className="items-center ">
+                    {/* <div className="items-center ">
                         <div className="mb-10">
                             <div className="mb-3 text-3xl font-bold leading-normal  sm:text-4xl sm:leading-relaxed text-red-600">About MET Institute of Mass Media</div>
                             <div className="max-w-xl text-gray-500">
@@ -116,13 +146,58 @@ function IMM_LandingPage() {
                                 </div>
                             </div>
                         </div>
+                    </div> */}
+                    <div className="items-center ">
+                        <div className="text-black sm:text-lg ">
+                            <ul className="ml-[-2rem]" >
+                                <li className="text-left">
+                                    <label for="accordion-2" className="relative flex flex-col rounded-md border border-gray-100 shadow-md">
+                                        <input className="peer hidden" type="checkbox" id="accordion-2" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="absolute right-0 top-4 ml-auto mr-5 h-4 text-gray-500 transition peer-checked:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                        <div className="relative ml-4 cursor-pointer select-none items-center py-4 pr-12">
+                                            <h2 className=" text-3xl font-bold tracking-tight text-red-600">
+                                                About MET Institute of Mass Media
+                                            </h2>
+                                        </div>
+                                        <div className="max-h-0 overflow-hidden transition-all duration-500 peer-checked:max-h-[51rem]">
+                                            <div className="p-5">
+                                                <div className="max-w-xl text-gray-500">
+                                                    Vision, Mission Values of the MET Institute of Mass Media
+                                                </div>
+                                                <div className="flex flex-col lg:flex-row">
+                                                    <div className="mr-4">
+                                                        <div className="mt-8 text-xl font-bold md:mt-0 md:mb-8 md:text-2xl">Vision</div>
+                                                        <div className="text-gray-500">
+                                                            To be Internationally recognized as a leading Media Management Institution creating value-oriented professionals and entrepreneurs contributing to development of the Nation.
+                                                        </div>
+                                                    </div>
+                                                    <div className="mr-4">
+                                                        <div className="mt-8 text-xl font-bold md:mt-0 md:mb-8 md:text-2xl">Mission</div>
+                                                        <div className="text-gray-500">
+                                                            To strengthen industry connect for promoting media business expertise and also to create an ecosystem to engage in research and academic development work.
+                                                        </div>
+                                                    </div>
+                                                    <div className="mr-4">
+                                                        <div className="mt-8 text-xl font-bold md:mt-0 md:mb-8 md:text-2xl">Values</div>
+                                                        <div className="text-gray-500">
+                                                            Creativity, Innovation, Integrity, Growth, Social Responsibility
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </section>
 
             <section className="bg-white ">
                 <div className="max-w-screen-xl px-4 py-6 mx-auto space-y-12 lg:space-y-20 lg:py-6 lg:px-6">
-
                     <div className="items-center ">
                         <div className="text-black sm:text-lg ">
                             <ul className="ml-[-2rem]" >
@@ -657,9 +732,9 @@ function IMM_LandingPage() {
                             </h2>
 
                             <p className="text-base font-medium leading-tight text-gray-600">
-                                Kindly fill out the registration form. After completing the payment of the registration fee, please share a screenshot of the payment confirmation at 
+                                Kindly fill out the registration form. After completing the payment of the registration fee, please share a screenshot of the payment confirmation at
                                 <a href="mailto:metcet@met.edu" onClick={(e) => window.location.href = 'mailto:metcet@met.edu'}> metcet@met.edu </a>
-                                or via WhatsApp at 
+                                or via WhatsApp at
                                 <a href="https://wa.me/9136901541" onClick={(e) => window.location.href = 'https://wa.me/9136901541'}> 9136901541 </a>.
 
                                 Fees: Rs. 1800/- (including GST and study materials on LMS).
