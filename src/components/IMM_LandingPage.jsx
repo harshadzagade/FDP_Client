@@ -134,10 +134,10 @@ function IMM_LandingPage() {
                                         </svg>
                                         <div className="relative ml-4 cursor-pointer select-none items-center py-4 pr-12">
                                             <h2 className=" text-3xl font-bold tracking-tight text-red-600">
-                                                About CET
+                                                About Centre of Educational Technology
                                             </h2>
                                         </div>
-                                        <div className="max-h-0 overflow-hidden transition-all duration-500 peer-checked:max-h-96">
+                                        <div className="max-h-0 overflow-hidden transition-all duration-500 peer-checked:max-h-[51rem]">
                                             <div className="p-5">
                                                 <p className="text-base font-normal  text-gray-500">
                                                     MET Centre of Educational Technology (CET) established on 5th Dec 2009 with the intent to develop and use technology in education and technology of education in all the MET institutes and also in the school - MET Rishikul Vidyalaya. The aim is to create a world class learner friendly environment for an active learning process. The most important function of MET CET is to research the latest trends in education worldwide and keep the MET faculty abreast with the same. The department aids the faculty members to use, implement or deliver the most relevant and appropriate educational trends in teaching-learning processes. The department also prepares supportive educational material catering to different kinds of learners like Visual, Auditory, and Kinesthetic etc. The department includes a team of qualified instructional designers who are experts in the field of educational technology.
@@ -272,7 +272,7 @@ function IMM_LandingPage() {
                                     </svg>
                                     <span className="text-base font-medium leading-tight text-gray-600">
                                         Participants will gain practical experience in case study writing through hands-on
-                                        training sessions executed by experts.</span>
+                                        training sessions executed by experts</span>
                                 </li>
                                 <li className="flex space-x-3">
 
@@ -388,7 +388,7 @@ function IMM_LandingPage() {
                                     <div>
                                         <h3 className="mb-4 text-3xl font-bold tracking-tight text-red-600 ">Chief Patron</h3>
                                         <div className="block rounded-lg">
-                                            <div className="flex flex-col sm:flex-row items-center sm:items-start rounded-md border border-gray-100 bg-white p-4 shadow-lg">
+                                            <div className="flex flex-col sm:flex-row items-center sm:items-start rounded-md border border-gray-100 bg-white p-3 shadow-lg">
                                                 <img
                                                     className="h-20 w-20 rounded-full object-cover sm:mb-0 sm:mr-4"
                                                     src="../../assets/img/Pankaj_Bhujbal sir.jpg"
@@ -407,10 +407,10 @@ function IMM_LandingPage() {
                                     <div>
                                         <h3 className="mb-4 text-3xl font-bold tracking-tight text-red-600 ">Coordinator</h3>
                                         <div className="block rounded-lg">
-                                            <div className="flex flex-col sm:flex-row items-center sm:items-start rounded-md border border-gray-100 bg-white p-4 shadow-lg">
+                                            <div className="flex flex-col sm:flex-row items-center sm:items-start rounded-md border border-gray-100 bg-white p-3 shadow-lg">
                                                 <img
                                                     className="h-20 w-20 rounded-full object-cover sm:mb-0 sm:mr-4"
-                                                    src="../../assets/img/moushmi.jpg"
+                                                    src="../../assets/img/moushmi1.jpg"
                                                     alt="Dr. Mouchumi Deka"
                                                 />
                                                 <div>
@@ -427,18 +427,18 @@ function IMM_LandingPage() {
                                 <div className="flex flex-col space-y-8 w-full md:w-1/2">
                                     {/* Programme Facilitators Section */}
                                     <div>
-                                        <h3 className="mb-4 text-3xl font-bold tracking-tight text-red-600 ">Programme Facilitators:</h3>
+                                        <h3 className="mb-4 text-3xl font-bold tracking-tight text-red-600 ">Programme Facilitators</h3>
                                         <div className="flex flex-col sm:flex-row text-gray-600 space-y-8 sm:space-y-0 sm:space-x-8">
                                             {/* Facilitator 1 */}
                                             <div className="block rounded-lg">
-                                                <div className="flex flex-col sm:flex-row items-center sm:items-start rounded-md border border-gray-100 bg-white p-4 shadow-lg">
+                                                <div className="flex flex-col sm:flex-row items-center sm:items-start rounded-md border border-gray-100 bg-white p-3 shadow-lg">
                                                     <img
                                                         className="h-20 w-20 rounded-full object-cover sm:mb-0 sm:mr-4"
                                                         src="../../assets/img/sarkar.jpg"
                                                         alt="Dr. Suvrashis Sarkar"
                                                     />
                                                     <div>
-                                                        <span className="text-lg font-medium">Dr. Suvrashis,</span>
+                                                        <span className="text-base font-medium">Dr. Suvrashis Sarkar,</span>
                                                         <p className="mb-1 font-normal">Dean,</p>
                                                         <p className="text-xs text-gray-400">MET IMM</p>
                                                     </div>
@@ -447,7 +447,7 @@ function IMM_LandingPage() {
 
                                             {/* Facilitator 2 */}
                                             <div className="block rounded-lg">
-                                                <div className="flex flex-col sm:flex-row items-center sm:items-start rounded-md border border-gray-100 bg-white p-4 shadow-lg">
+                                                <div className="flex flex-col sm:flex-row items-center sm:items-start rounded-md border border-gray-100 bg-white p-3 shadow-lg">
                                                     <img
                                                         className="h-20 w-20 rounded-full object-cover sm:mb-0 sm:mr-4"
                                                         src="../../assets/img/chitra.jpg"
@@ -465,9 +465,9 @@ function IMM_LandingPage() {
 
                                     {/* Co-Coordinator Section */}
                                     <div>
-                                        <h3 className="mb-4 text-3xl font-bold tracking-tight text-red-600 ">Coordinator</h3>
+                                        <h3 className="mb-4 text-3xl font-bold tracking-tight text-red-600 ">Co-Coordinator</h3>
                                         <div className="block rounded-lg">
-                                            <div className="flex flex-col sm:flex-row items-center sm:items-start rounded-md border border-gray-100 bg-white p-4 shadow-lg">
+                                            <div className="flex flex-col sm:flex-row items-center sm:items-start rounded-md border border-gray-100 bg-white p-3 shadow-lg">
                                                 <img
                                                     className="h-20 w-20 rounded-full object-cover sm:mb-0 sm:mr-4"
                                                     src="../../assets/img/muskan.jpg"
@@ -508,7 +508,7 @@ function IMM_LandingPage() {
                                 <table className="min-w-full border-separate border-spacing-y-2 border-spacing-x-2">
                                     <thead className="hidden border-b lg:table-header-group">
                                         <tr className="">
-                                            <td 
+                                            <td
                                                 className="whitespace-normal py-4  font-bold text-black sm:px-6">
                                                 Day & Date
                                             </td>
@@ -527,7 +527,7 @@ function IMM_LandingPage() {
 
                                     <tbody className="lg:border-gray-300">
                                         <tr className="">
-                                            <td 
+                                            <td
                                                 className="whitespace-no-wrap py-4 text-sm font-bold text-gray-900 sm:px-6">
                                                 7th January, Tuesday
                                                 2025 (offline)
@@ -544,7 +544,7 @@ function IMM_LandingPage() {
                                         </tr>
 
                                         <tr className="">
-                                            <td 
+                                            <td
                                                 className="whitespace-no-wrap py-4 text-sm font-bold text-gray-900 sm:px-6">
                                                 8 th January, Wednesday 2025 (online)
                                             </td>
@@ -561,7 +561,7 @@ function IMM_LandingPage() {
                                         </tr>
 
                                         <tr className="">
-                                            <td 
+                                            <td
                                                 className="whitespace-no-wrap py-4 text-sm font-bold text-gray-900 sm:px-6">
                                                 9th January, Thursday
                                                 2025 (online)
@@ -580,7 +580,7 @@ function IMM_LandingPage() {
                                         </tr>
 
                                         <tr className="">
-                                            <td 
+                                            <td
                                                 className="whitespace-no-wrap py-4 text-sm font-bold text-gray-900 sm:px-6">
                                                 10th January, Friday 2025 (online)
                                             </td>
@@ -597,7 +597,7 @@ function IMM_LandingPage() {
                                         </tr>
 
                                         <tr className="">
-                                            <td 
+                                            <td
                                                 className="whitespace-no-wrap py-4 text-sm font-bold text-gray-900 sm:px-6">
                                                 25th January, Saturday 2025 (offline)
                                             </td>
@@ -654,12 +654,13 @@ function IMM_LandingPage() {
                         <div className="text-gray-500 sm:text-lg ">
                             <h2 className="mb-4 text-3xl font-bold tracking-tight text-red-600 ">
                                 How To Apply?
-                                </h2>
+                            </h2>
 
                             <p className="text-base font-medium leading-tight text-gray-600">
-                                Kindly scan the QR code to fill out the registration form. After completing the payment of the
-                                registration fee, please share a screenshot of the payment confirmation at metcet@met.edu or via
-                                WhatsApp at 9136901541.
+                                Kindly fill out the registration form. After completing the payment of the registration fee, please share a screenshot of the payment confirmation at 
+                                <a href="mailto:metcet@met.edu" onClick={(e) => window.location.href = 'mailto:metcet@met.edu'}> metcet@met.edu </a>
+                                or via WhatsApp at 
+                                <a href="https://wa.me/9136901541" onClick={(e) => window.location.href = 'https://wa.me/9136901541'}> 9136901541 </a>.
 
                                 Fees: Rs. 1800/- (including GST and study materials on LMS).
 
