@@ -151,8 +151,8 @@ function IMM_LandingPage() {
                         <div className="text-black sm:text-lg ">
                             <ul className="ml-[-2rem]" >
                                 <li className="text-left">
-                                    <label for="accordion-2" className="relative flex flex-col rounded-md border border-gray-100 shadow-md">
-                                        <input className="peer hidden" type="checkbox" id="accordion-2" />
+                                    <label for="accordion-1" className="relative flex flex-col rounded-md border border-gray-100 shadow-md">
+                                        <input className="peer hidden" type="checkbox" id="accordion-1" />
                                         <svg xmlns="http://www.w3.org/2000/svg" className="absolute right-0 top-4 ml-auto mr-5 h-4 text-gray-500 transition peer-checked:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                                         </svg>
@@ -163,7 +163,7 @@ function IMM_LandingPage() {
                                         </div>
                                         <div className="max-h-0 overflow-hidden transition-all duration-500 peer-checked:max-h-[51rem]">
                                             <div className="p-5">
-                                                <div className="max-w-xl text-gray-500">
+                                                <div className="mb-5 max-w-xl text-gray-500">
                                                     Vision, Mission Values of the MET Institute of Mass Media
                                                 </div>
                                                 <div className="flex flex-col lg:flex-row">
@@ -202,8 +202,8 @@ function IMM_LandingPage() {
                         <div className="text-black sm:text-lg ">
                             <ul className="ml-[-2rem]" >
                                 <li className="text-left">
-                                    <label for="accordion-2" className="relative flex flex-col rounded-md border border-gray-100 shadow-md">
-                                        <input className="peer hidden" type="checkbox" id="accordion-2" />
+                                    <label for="accordion-3" className="relative flex flex-col rounded-md border border-gray-100 shadow-md">
+                                        <input className="peer hidden" type="checkbox" id="accordion-3" />
                                         <svg xmlns="http://www.w3.org/2000/svg" className="absolute right-0 top-4 ml-auto mr-5 h-4 text-gray-500 transition peer-checked:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                                         </svg>
